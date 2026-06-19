@@ -665,7 +665,7 @@ function populateReferSelect(){
   sel.innerHTML='';
   sel.appendChild(new Option('Избери позиция…',''));
   ROLES.forEach(r=> sel.appendChild(new Option(r.title, r.title)));
-  sel.appendChild(new Option('Друго / не съм сигурен','Друго / не съм сигурен'));
+  sel.appendChild(new Option('Друго / Не съм сигурен','Друго / Не съм сигурен'));
 }
 async function loadRoles(){
   list.innerHTML = '<div class="roles__msg">Зареждане на позициите…</div>';
