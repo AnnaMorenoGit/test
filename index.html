@@ -689,12 +689,13 @@ async function loadRoles(){
     });
     populateReferSelect();
     const oc = document.getElementById('openCount'); if(oc) oc.textContent = ROLES.length;
-    if(!ROLES.length){ filtersEl.innerHTML=''; list.innerHTML = '<div class="roles__msg">В момента няма публикувани позиции.</div>'; return; }
+    if(!ROLES.length){ filtersEl.innerHTML=''; list.innerHTML = '<div class="roles__msg">В момента нямаме свободни позиции.</div>'; return; }
     renderFilters();
     renderRoles(activeFilter);
   }catch(err){
     console.error('data.xlsx load failed:', err);
     populateReferSelect();
+    const oc = document.getElementById('openCount'); if(oc) oc.textContent = '0';
     filtersEl.innerHTML='';
     list.innerHTML = '<div class="roles__msg roles__msg--err"><b>Позициите не могат да се заредят.</b><br>Уверете се, че файлът <b>data.xlsx</b> е в същата папка като страницата и че сайтът се отваря през уеб сървър (напр. GitHub Pages), а не директно от файловата система (file://).</div>';
   }
