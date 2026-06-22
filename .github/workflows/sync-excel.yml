@@ -10,14 +10,16 @@ jobs:
     steps:
     - name: Checkout Code
       uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GH_PAT }} # <-- This instructs GitHub to act as YOU, not a bot
 
     - name: Download Latest Excel File
       run: |
-        curl -L -o data.xlsx "https://inbetgroup-my.sharepoint.com/:x:/g/personal/adriana_koleva_inbet_com/IQCa0laTnSWZT4sA7Zap0DCZAdlMdwlkaBMi3sC0QfURR0o?e=KXPMfm&download=1"
+        curl -L -o data.xlsx "https://inbetgroup-my.sharepoint.com/:x:/g/personal/adriana_koleva_inbet_com/IQCa0laTnSWZT4sA7Zap0DCZAdlMdwlkaBMi3sC0QfURR0o?e=31b3b4&download=1"
 
     - name: Commit and Push Changes
       run: |
-        git config --global user.name "GitHub Actions Bot"
+        git config --global user.name "AnnaMorenoGit"
         git config --global user.email "actions@github.com"
         git add data.xlsx
         git commit -m "Automated Excel sync from OneDrive" || exit 0
