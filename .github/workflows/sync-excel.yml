@@ -13,7 +13,7 @@ jobs:
 
     - name: Download Latest Excel File
       run: |
-        curl -L -o data.xlsx "https://inbetgroup-my.sharepoint.com/:x:/g/personal/adriana_koleva_inbet_com/IQCa0laTnSWZT4sA7Zap0DCZAdlMdwlkaBMi3sC0QfURR0o?e=31b3b4?download=1"
+        curl -L -o data.xlsx "https://inbetgroup-my.sharepoint.com/:x:/g/personal/adriana_koleva_inbet_com/IQCa0laTnSWZT4sA7Zap0DCZAdlMdwlkaBMi3sC0QfURR0o?e=31b3b4&download=1"
 
     - name: Commit and Push Changes
       run: |
