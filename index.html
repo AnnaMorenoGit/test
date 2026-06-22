@@ -70,9 +70,9 @@
   /* ---------- NAV ---------- */
   .nav{
     position:sticky;top:0;z-index:50;
-    backdrop-filter:blur(14px);
-    background:rgba(7,11,32,.72);
-    border-bottom:1px solid var(--line-soft);
+    -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+    background:linear-gradient(135deg,var(--brand-deep),var(--brand-deeper) 60%,#06091f);
+    border-bottom:1px solid var(--line);
   }
   .nav__inner{display:flex;align-items:center;justify-content:space-between;height:68px}
   .brand{display:flex;align-items:center;gap:11px;font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.02em}
